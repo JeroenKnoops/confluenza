@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { EditFile } from '../components/Editing'
-import glamorous from 'glamorous'
 import graphql from 'graphql'
 
 const Template = ({ data: { doc } }) => {
