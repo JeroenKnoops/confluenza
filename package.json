@@ -8,7 +8,6 @@
   "dependencies": {
     "@react-frontend-developer/css-grid-helper": "^1.0.6",
     "gatsby": "next",
-    "gatsby-cli": "next",
     "gatsby-link": "next",
     "gatsby-plugin-catch-links": "next",
     "gatsby-plugin-glamor": "next",
@@ -24,6 +23,7 @@
     "glamorous": "^4.13.1",
     "prismjs": "^1.13.0",
     "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "react-helmet": "^5.2.0",
     "react-typography": "0.16.13",
     "typography": "^0.16.17",
@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
-    "gatsby-cli": "^1.1.58",
+    "gatsby-cli": "next",
     "standard": "^11.0.1"
   }
 }
