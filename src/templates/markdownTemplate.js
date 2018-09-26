@@ -1,19 +1,18 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { EditFile } from '../components/Editing'
+import { EditFile } from 'src/components/Editing'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-
-const Template = ({ data: { doc } }) => {
-  const { html, fileAbsolutePath, frontmatter: { title } } = doc
+const Template = ({ data: { doc }, location }) => {
+  const { html, fileAbsolutePath, frontmatter: { title, content } } = doc
   return (
-    <Layout>
+    <div>
       <Helmet title={title} />
-      <EditFile fileAbsolutePath={fileAbsolutePath} />
+      <EditFile fileAbsolutePath={content ? content.childMarkdownRemark.fileAbsolutePath : fileAbsolutePath} />
       <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </Layout>
+      <div dangerouslySetInnerHTML={{ __html: content ? content.childMarkdownRemark.html.split('\n').slice(1).join('\n') : html }} />
+      { content && html !== '' && <div dangerouslySetInnerHTML={{ __html: html }} />}
+    </div>
   )
 }
 
@@ -24,6 +23,12 @@ export const pageQuery = graphql`
       fileAbsolutePath
       frontmatter {
         title
+        content {
+          childMarkdownRemark {
+            html
+            fileAbsolutePath
+          }
+        }
       }
     }
   }

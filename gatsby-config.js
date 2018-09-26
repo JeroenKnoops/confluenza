@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: `/confluenza`,
   siteMetadata: {
     title: 'Confluenza'
   },
@@ -7,9 +6,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src`
+        path: `${__dirname}`,
+        ignore: ['**/.cache/**', '**/public/**']
       }
     },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -52,6 +53,8 @@ module.exports = {
       }
     },
     'gatsby-plugin-glamor',
-    'gatsby-plugin-catch-links'
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-layout',
+    'gatsby-plugin-root-import'
   ]
 }
