@@ -4,4 +4,4 @@ A markdown-focused documentation browser based on the powerful framework [Gatsby
 
 Check our [documentation] page for more insights.
 
-[documentation]: https://confluenza.now.sh/user-documentation/using-confluenza
+[documentation]: https://confluenza.now.sh/developer-documentation/making-confluenza-yours
