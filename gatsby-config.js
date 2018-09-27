@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Confluenza'
+    title: 'Confluenza',
+    editBaseUrl: 'https://github.com/Charterhouse/confluenza/blob/master'
   },
   plugins: [
     {

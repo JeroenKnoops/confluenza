@@ -21,14 +21,13 @@ const Wrapper = glamorous.div({
 })
 
 class EditFile extends React.Component {
-  editUrl = 'https://github.com/Charterhouse/confluenza/blob/master'
-
   renderEditThisPageLink = (fileAbsolutePath, linkText) => {
     const match = fileAbsolutePath.match(/.*\/(src.*)$/) || fileAbsolutePath.match(/.*\/(.*)$/)
     if (match) {
       const fileRelativePath = match[1]
+      const { editBaseUrl } = this.props
       return (
-        <A href={`${this.editUrl}/${fileRelativePath}`}>{linkText}</A>
+        <A href={`${editBaseUrl}/${fileRelativePath}`}>{linkText}</A>
       )
     }
     return null
