@@ -45,7 +45,9 @@
     ]
   },
   "keywords": [
-    "gatsby", "confluenza", "markdown"
+    "gatsby",
+    "confluenza",
+    "markdown"
   ],
   "license": "MIT",
   "main": "n/a",
@@ -56,9 +58,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "gatsby-cli": "^2.0.0",
     "gatsby-plugin-root-import": "^2.0.0",
-    "babel-eslint": "^8.2.3",
     "standard": "^11.0.1"
   }
 }
