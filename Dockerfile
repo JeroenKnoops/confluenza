@@ -1,5 +1,5 @@
 FROM node:10.10.0
-WORKDIR /usr/src
+WORKDIR /usr/confluenza
 COPY yarn.lock package.json ./
 RUN yarn
 COPY . .
