@@ -1,7 +1,7 @@
 import React from 'react'
 import glamorous from 'glamorous'
 
-const editUrl = 'https://github.com/philips-software/cogito/blob/master'
+const editUrl = 'https://github.com/Charterhouse/confluenza/blob/master'
 
 const A = glamorous.a({
   fontFamily: 'Roboto Mono, monospace',
@@ -19,9 +19,9 @@ const Wrapper = glamorous.div({
 })
 
 export const EditFile = ({ fileAbsolutePath }) => {
-  const match = fileAbsolutePath.match(/workspaces.*$/)
-  if (match) {
-    const fileRelativePath = match[0]
+  const match = fileAbsolutePath.match(/.*\/(src.*)$/) || fileAbsolutePath.match(/.*\/(.*)$/)
+  if (match && match.length >= 1) {
+    const fileRelativePath = match[1]
     return (
       <Wrapper>
         <A href={`${editUrl}/${fileRelativePath}`}>Edit this page</A>
