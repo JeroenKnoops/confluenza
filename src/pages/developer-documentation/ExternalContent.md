@@ -3,6 +3,35 @@
 Even in its very early release Confluenza is still easy to adjust so that it
 fits the needs of your project.
 
+## Start your own Confluenza
+
+1.  **Create a Confluenza site.**
+
+    Use the Gatsby CLI to create a new site, specifying the default starter.
+
+    ```sh
+    # create a new Confluenza site
+    npx gatsby new my-confluenza https://github.com/charterhouse/confluenza
+    ```
+
+1.  **Start developing.**
+
+    Navigate into your new site’s directory and start it up.
+
+    ```sh
+    cd my-confluenza/
+    yarn develop
+    ```
+
+1.  **Open the source code and start editing!**
+
+    Your site is now running at `http://localhost:8000`!
+
+    *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
+
+    Open the `my-confluenza` directory in your code editor of choice and edit `src/pages/`. Save your changes and the browser will update in real time!
+
+
 ## Frontmatter
 
 Every markdown file that is supposed to be rendered by Confluenza needs to have a so called `frontmatter`
@@ -176,8 +205,8 @@ have a monorepo with a workspace corresponding to an npm package. This workspace
 contain a `README.md` file. You may want to include the content of this file in your Confluenza based
 site and still let it be rendered by github or npmjs website.
 
-Now, when rendering the markdown file, Confluenza depends on the so called `frontmatter` containing 
-important metadata like `title`, `path` and `tag`. These metadata do not have any meaning outside of the 
-Confluenza environment and therefore should not be kept e.g. in the actual README file of your npm package. 
+Now, when rendering the markdown file, Confluenza depends on the so called `frontmatter` containing
+important metadata like `title`, `path` and `tag`. These metadata do not have any meaning outside of the
+Confluenza environment and therefore should not be kept e.g. in the actual README file of your npm package.
 This is not only a cleaner solution (the frontmatter may confuse the reader who is not aware of Confluenza),
 but also helps sites that do not render the frontmatter correctly (like npmjs).
